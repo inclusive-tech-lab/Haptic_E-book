@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ImageChooser" >
+
+    <TextView
+        android:id="@+id/txtvw_choosebook"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:text="Please choose a book to edit!" 
+        android:textSize="24sp"/>
+    
+    <ScrollView
+        android:layout_below="@+id/txtvw_choosebook"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	    <LinearLayout
+	        android:id="@+id/LL_books"
+	        android:gravity="center_horizontal"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+	        <ImageButton
+		            android:id="@+id/imgbtn_NewBook"
+		            android:layout_width="200px"
+		            android:layout_height="200px"
+	    			android:gravity="center"
+		            android:src="@drawable/newbook" 
+		            android:onClick="openImageChooser"/>
+	        
+	    </LinearLayout>
+    </ScrollView>
+        
+
+</RelativeLayout>

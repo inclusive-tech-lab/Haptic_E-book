@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Haptic Canvas</string>
+    <string name="brushsize">Size of Brush</string>
+    <string name="brushColor">Color of Brush</string>
+    <string name="filename">File Name Here</string>
+    <string name="title_activity_image_chooser">ImageChooser</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
