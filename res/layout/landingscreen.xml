@@ -36,7 +36,7 @@
 		            android:src="@drawable/createbook" 
 		            android:onClick="openBookChooser"/>
 		        <TextView
-		            android:text="Create and Edit"
+		            android:text="Create or Edit Book"
 		            android:layout_width="fill_parent"
 		            android:layout_height="fill_parent"
 		    		android:gravity="center"/>
