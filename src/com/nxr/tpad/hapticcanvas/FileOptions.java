@@ -1,6 +1,5 @@
 package com.nxr.tpad.hapticcanvas;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -10,7 +9,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -52,7 +50,7 @@ public class FileOptions extends Activity {
 				hapticLoad = false;
 				// We must start a new intent to request data from the system's
 				// image picker
-				Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+				Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
 				photoPickerIntent.setType("image/*");
 				startActivityForResult(photoPickerIntent, REQ_CODE_PICK_IMAGE);
 			}
@@ -74,9 +72,9 @@ public class FileOptions extends Activity {
 		});
 		
 		/*--------------------Added by Scott Neaves 2-28-2014, may be incorrect--------------------------*/
-		String bg_img_FileName = this.getIntent().getExtras().getString("page_fileName_frmIntent");
-		Log.w("TPAD App", "filename received by FileOptions, sent by HapticCanvasActivity: " + bg_img_FileName);
-		setBackgroundImage_fromImageChooser(bg_img_FileName);
+		//String bg_img_FileName = this.getIntent().getExtras().getString("page_fileName_frmIntent");
+		//Log.w("TPAD App", "filename received by FileOptions, sent by HapticCanvasActivity: " + bg_img_FileName);
+		//setBackgroundImage_fromImageChooser(bg_img_FileName);
 		/*--------------------End Added by Scott Neaves 2-28-2014, may be incorrect--------------------------*/
 
 		/*
@@ -125,7 +123,7 @@ public class FileOptions extends Activity {
 	}
 	*/
 	
-	/*--------------------Added by Scott Neaves 2-28-2014, may be incorrect--------------------------*/
+	/*--------------------Added by Scott Neaves 2-28-2014, may be incorrect--------------------------
 	protected void setBackgroundImage_fromImageChooser(String bg_img_FileName){
 		hapticLoad = false;
 		//Get URI of image to be texturized from intent here:
@@ -153,7 +151,7 @@ public class FileOptions extends Activity {
 		}finally{			
 		}
 	}
-	/*--------------------End Added by Scott Neaves 2-28-2014, may be incorrect--------------------------*/
+	--------------------End Added by Scott Neaves 2-28-2014, may be incorrect--------------------------*/
 	
 	
 	
@@ -165,6 +163,7 @@ public class FileOptions extends Activity {
 		switch (requestCode) {
 		case REQ_CODE_PICK_IMAGE:
 			if (resultCode == RESULT_OK) {
+				Log.w("TPAD App", "Result is OK");
 				Uri bitmapUri = imageReturnedIntent.getData();
 				String fileName = null;
 				String scheme = bitmapUri.getScheme();
@@ -183,6 +182,7 @@ public class FileOptions extends Activity {
 
 				HapticCanvasActivity.myHapticView.writeToLog(timestamp() + dl + "BackgroundLoaded" + dl + fileName);
 				HapticCanvasActivity.myHapticView.backgroundName = fileName;
+				Log.w("TPAD App", "Set backgroundName to fileName");
 				
 				try {
 
