@@ -3,7 +3,6 @@ package com.nxr.tpad.hapticcanvas;
 import nxr.tpadioio.lib.TPadIOIOTabActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -29,19 +28,12 @@ public class HapticCanvasActivity extends TPadIOIOTabActivity {
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		
 		/*---------------Added by Scott Neaves 2-28-2014 ----------------*/
-		page_fileName_frmIntent = this.getIntent().getExtras().getString("page_fileName");
-		Log.w("TPAD App", "filname received by HapticCanvasActivity, sent by ImageChooser: " + page_fileName_frmIntent);
+		//page_fileName_frmIntent = this.getIntent().getExtras().getString("page_fileName");
+		//Log.w("TPAD App", "filname received by HapticCanvasActivity, sent by ImageChooser: " + page_fileName_frmIntent);
 		/*---------------End Added by Scott Neaves 2-28-2014 ----------------*/
 		
 		mTabHost = getTabHost();
-		
-		/*------------Moved this from end of onCreate to here by Scott Neaves 2-28-2014 -----------------*/
-		
-		// initialize screenview class object
-		myHapticView = (HapticCanvasView) findViewById(R.id.hapticCanvasView);
-		// Start communication with TPad
-		
-		/*------------End Moved this from end of onCreate to here by Scott Neaves 2-28-2014 -----------------*/
+
 
 		TabSpec FileSpec = mTabHost.newTabSpec("File");
 		FileSpec.setIndicator("Save/Load");
@@ -71,6 +63,9 @@ public class HapticCanvasActivity extends TPadIOIOTabActivity {
 		mTabHost.addTab(EditSpec);
 		mTabHost.addTab(FeelSpec);
 				
+		// initialize screenview class object
+		myHapticView = (HapticCanvasView) findViewById(R.id.hapticCanvasView);
+		// Start communication with TPad
 		myHapticView.setContext(this);
 
 	}
