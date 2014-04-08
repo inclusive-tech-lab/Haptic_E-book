@@ -3,14 +3,11 @@ package com.nxr.tpad.hapticcanvas;
 import nxr.tpadioio.lib.TPadTexture;
 import android.app.Activity;
 import android.content.Context;
-import android.drm.DrmStore.Action;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -26,7 +23,7 @@ public class BrushOptions extends Activity implements OnColorChangedListener, On
 	private SeekBar BrushWidthBar;
 	private BrushPreview BrushView;
 	
-	private HapticCanvasActivity mActivity;
+	private HapticCanvasActivity_Scott mActivity;
 
 	Context mContext;
 	OnColorChangedListener mColorListener;
@@ -43,7 +40,7 @@ public class BrushOptions extends Activity implements OnColorChangedListener, On
 
 		setContentView(R.layout.brushlayout);
 
-		myHapticView = HapticCanvasActivity.myHapticView;
+		myHapticView = HapticCanvasActivity_Scott.myHapticView;
 		myPalatte = HapticCanvasView.myPaintBucket;
 
 		ColorButtons = new ColorButton[myPalatte.length()];
@@ -85,7 +82,7 @@ public class BrushOptions extends Activity implements OnColorChangedListener, On
 
 		setColors();
 		ColorButtons[0].setSelect(true);
-		HapticCanvasActivity.myHapticView.setBrushColor(myPalatte.getColor(0));
+		HapticCanvasActivity_Scott.myHapticView.setBrushColor(myPalatte.getColor(0));
 		BrushView.setColor(Color.CYAN);
 		
 		
@@ -131,6 +128,16 @@ public class BrushOptions extends Activity implements OnColorChangedListener, On
 		
 	}
 
+/*
+// This is to make the seekbar snap to multiples of 20, so that there are only five options. - Scott
+	@Override 
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+		SeekBar sliderValueTW = (SeekBar)findViewById(R.id.brushSizeSlider);
+	    sliderValueTW.setValue(Float.toString((float)(progress-100)/10)); 
+
+	}
+*/
+	
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		float amp = 0;

@@ -26,7 +26,8 @@
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:max="100" />
 
         <Button
             android:id="@+id/eraser"
@@ -68,21 +69,24 @@
             android:layout_height="110dp"
             android:layout_gravity="top"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color2"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color3"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color4"
@@ -90,7 +94,8 @@
             android:layout_height="110dp"
             android:layout_gravity="top"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -124,28 +129,32 @@
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color7"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color8"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color9"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -165,28 +174,32 @@
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color12"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color13"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color14"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -206,28 +219,32 @@
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color17"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color18"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color19"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -247,28 +264,32 @@
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color22"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color23"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <com.nxr.tpad.hapticcanvas.ColorButton
             android:id="@+id/color24"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_margin="5dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
     </LinearLayout>
 
 </LinearLayout>

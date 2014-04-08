@@ -123,7 +123,7 @@ public class ImageChooser extends Activity {
 
 	public void openImageEditor(View view) {
 	    // Do something in response to button
-		Intent intent = new Intent(this, HapticCanvasActivity.class);
+		Intent intent = new Intent(this, HapticCanvasActivity_Scott.class);
 		//Log.w("TPAD App", "intent extra from ImageChooser to HapticCanvasActivity is: " + (view).getTag().toString());
 		//intent.putExtra("page_fileName", (view).getTag().toString());
 		startActivity(intent);

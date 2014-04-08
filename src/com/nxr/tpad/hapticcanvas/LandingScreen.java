@@ -26,7 +26,7 @@ public class LandingScreen extends Activity {
 	}
 	public void ReadBook(View view) {
 	    // Do something in response to button
-		Intent intent = new Intent(this, HapticCanvasActivity.class);
+		Intent intent = new Intent(this, HapticCanvasActivity_Scott.class);
 		startActivity(intent);
 	}
 	

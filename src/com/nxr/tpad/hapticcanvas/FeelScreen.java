@@ -21,9 +21,9 @@ public class FeelScreen extends Activity{
 	@Override
 	protected void onResume(){
 		super.onResume();
-		HapticCanvasActivity.myHapticView.saveFile();
-		HapticCanvasActivity.myHapticView.setDrawing(false);
-		HapticCanvasActivity.myHapticView.writeToLog(timestamp()+";"+"SwitchedToFeelMode"+";"+HapticCanvasActivity.myHapticView.backgroundName);
+		HapticCanvasActivity_Scott.myHapticView.saveFile();
+		HapticCanvasActivity_Scott.myHapticView.setDrawing(false);
+		HapticCanvasActivity_Scott.myHapticView.writeToLog(timestamp()+";"+"SwitchedToFeelMode"+";"+HapticCanvasActivity_Scott.myHapticView.backgroundName);
 		
 	}
 

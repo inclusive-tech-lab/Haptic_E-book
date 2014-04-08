@@ -29,7 +29,7 @@ public class HapticCanvasView extends SurfaceView implements Runnable {
 
 	// Creates thread for drawing to run on
 	Thread myThread = null;
-	HapticCanvasActivity myActivity;
+	HapticCanvasActivity_Scott myActivity;
 	// Sets up boolean to check if thread is running
 	private boolean isRunning = false;
 
@@ -221,7 +221,7 @@ public class HapticCanvasView extends SurfaceView implements Runnable {
 
 	}
 
-	public void setContext(HapticCanvasActivity a) {
+	public void setContext(HapticCanvasActivity_Scott a) {
 		myActivity = a;
 	}
 
@@ -432,13 +432,13 @@ public class HapticCanvasView extends SurfaceView implements Runnable {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 
-		currentTab = HapticCanvasActivity.mTabHost.getCurrentTabTag();
+		currentTab = HapticCanvasActivity_Scott.mTabHost.getCurrentTabTag();
 		if (currentTab == "Brush") {
-			HapticCanvasActivity.mTabHost.setCurrentTabByTag("Edit");
+			HapticCanvasActivity_Scott.mTabHost.setCurrentTabByTag("Edit");
 			return false;
 
 		} else if (currentTab == "File")
-			HapticCanvasActivity.mTabHost.setCurrentTabByTag("Feel");
+			HapticCanvasActivity_Scott.mTabHost.setCurrentTabByTag("Feel");
 
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
@@ -666,7 +666,7 @@ public class HapticCanvasView extends SurfaceView implements Runnable {
 
 		try {
 			fOut = new FileOutputStream(dir);
-			HapticCanvasActivity.myHapticView.getDrawBitmap().compress(Bitmap.CompressFormat.PNG, 100, fOut);
+			HapticCanvasActivity_Scott.myHapticView.getDrawBitmap().compress(Bitmap.CompressFormat.PNG, 100, fOut);
 			fOut.flush();
 			fOut.close();
 			// sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(dir)));

@@ -22,7 +22,7 @@
             android:required="false" />
 <!-- Marlon changed portrait to landscape (temporarily suspended)-->
         <activity
-            android:name="com.nxr.tpad.hapticcanvas.HapticCanvasActivity"
+            android:name="com.nxr.tpad.hapticcanvas.HapticCanvasActivity_Scott"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">

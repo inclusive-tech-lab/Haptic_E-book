@@ -14,7 +14,7 @@ public class EditScreen extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		myHapticView = HapticCanvasActivity.myHapticView;
+		myHapticView = HapticCanvasActivity_Scott.myHapticView;
 		//myTPad = HapticCanvasActivity.myTPad;
 		setContentView(R.layout.editlayout);
 		

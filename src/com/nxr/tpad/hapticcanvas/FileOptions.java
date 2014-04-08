@@ -180,8 +180,8 @@ public class FileOptions extends Activity {
 				    }
 				}
 
-				HapticCanvasActivity.myHapticView.writeToLog(timestamp() + dl + "BackgroundLoaded" + dl + fileName);
-				HapticCanvasActivity.myHapticView.backgroundName = fileName;
+				HapticCanvasActivity_Scott.myHapticView.writeToLog(timestamp() + dl + "BackgroundLoaded" + dl + fileName);
+				HapticCanvasActivity_Scott.myHapticView.backgroundName = fileName;
 				Log.w("TPAD App", "Set backgroundName to fileName");
 				
 				try {
@@ -191,9 +191,9 @@ public class FileOptions extends Activity {
 					Bitmap b = Media.getBitmap(getContentResolver(), bitmapUri);
 					
 					if (hapticLoad){
-						HapticCanvasActivity.myHapticView.setDrawBitmap(b);
+						HapticCanvasActivity_Scott.myHapticView.setDrawBitmap(b);
 					}else{
-						HapticCanvasActivity.myHapticView.setBackgroundBitmap(b);
+						HapticCanvasActivity_Scott.myHapticView.setBackgroundBitmap(b);
 					}
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -211,7 +211,7 @@ public class FileOptions extends Activity {
 
 	@Override
 	protected void onResume() {
-		HapticCanvasActivity.myHapticView.setDrawing(true);
+		HapticCanvasActivity_Scott.myHapticView.setDrawing(true);
 		super.onResume();
 	}
 	private String timestamp(){

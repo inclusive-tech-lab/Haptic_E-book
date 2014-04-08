@@ -7,7 +7,7 @@ import android.view.WindowManager;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
-public class HapticCanvasActivity extends TPadIOIOTabActivity {
+public class HapticCanvasActivity_Scott extends TPadIOIOTabActivity {
 
 	// Used to initialize our screenview object for
 	// drawing on to
@@ -16,7 +16,6 @@ public class HapticCanvasActivity extends TPadIOIOTabActivity {
 
 	public static HapticCanvasView myHapticView;
 
-	public static String page_fileName_frmIntent;
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -26,21 +25,11 @@ public class HapticCanvasActivity extends TPadIOIOTabActivity {
 		// set the content view to our layout .xml
 		setContentView(R.layout.hapticcanvas);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-		
-		/*---------------Added by Scott Neaves 2-28-2014 ----------------*/
-		//page_fileName_frmIntent = this.getIntent().getExtras().getString("page_fileName");
-		//Log.w("TPAD App", "filname received by HapticCanvasActivity, sent by ImageChooser: " + page_fileName_frmIntent);
-		/*---------------End Added by Scott Neaves 2-28-2014 ----------------*/
-		
 		mTabHost = getTabHost();
-
 
 		TabSpec FileSpec = mTabHost.newTabSpec("File");
 		FileSpec.setIndicator("Save/Load");
 		Intent fileIntent = new Intent(this, FileOptions.class);
-		/*---------------Added by Scott Neaves 2-28-2014 ----------------*/
-		//fileIntent.putExtra("page_fileName_frmIntent", page_fileName_frmIntent);
-		/*---------------End Added by Scott Neaves 2-28-2014 ----------------*/
 		FileSpec.setContent(fileIntent);
 		
 		TabSpec BrushSpec = mTabHost.newTabSpec("Brush");
@@ -63,10 +52,11 @@ public class HapticCanvasActivity extends TPadIOIOTabActivity {
 		mTabHost.addTab(EditSpec);
 		mTabHost.addTab(FeelSpec);
 				
+
 		// initialize screenview class object
 		myHapticView = (HapticCanvasView) findViewById(R.id.hapticCanvasView);
-		// Start communication with TPad
 		myHapticView.setContext(this);
+		// Start communication with TPad
 
 	}
 
